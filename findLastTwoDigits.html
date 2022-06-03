@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Найти две последние цифры</title>
+            <style>
+                .center .title {
+                    margin: auto;
+                    width: 20%;
+                }
+                
+                .formula {
+                    border:  1px solid;
+                    text-align: center;
+                }
+
+                .center .solving {
+                    margin: auto;
+                    width: 80%;
+                }
+
+                .center .clarification {
+                    margin: auto;
+                    width: 80%;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="center">
+                <div class="title">
+                    Найти последние две цифры числа 9<sup>9<sup>9</sup></sup>
+                </div>            
+            <div class="solving">
+                Последние две цифры для степений 9.<br>
+                9<sup>9</sup> = ...89<br>
+                9<sup>10</sup> = ...01<br>
+                9<sup>10</sup> = mod(100) 1
+                9<sup>10*p</sup> = mod(100) 1 <br>
+                Произвольная степень N можно представить как 10p+q:
+                9<sup>N</sup> = 9<sup>10*p + q</sup> = 9<sup>10*p</sup> * 9<sup>q</sup>, т.е.
+                9<sup>N</sup> =mod(100) 9<sup>q</sup>
+                <br>
+                <b>Любая степень 9 сравнима по модулю 100 с такой степенью 9, показатель которой равен остатку q от деления первоначально данного показателя на 10</b><br>
+                Таким образом, 9<sup>9<sup>9</sup></sup> = mod(100) 9<sup>9</sup>, а это значит, что 9<sup>9<sup>9</sup></sup> и 9<sup>9</sup> имеют одинаковые две последние цифры.
+                9<sup>9</sup> оканчивается на 89, значит и  9<sup>9<sup>9</sup></sup> тоже оканчивается на 89.
+            </div>
+        </body>
+</html>
